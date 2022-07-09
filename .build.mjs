@@ -42,9 +42,14 @@ async function addPackageJSON() {
   const raw = await fs.readFile(resolve(rootDir, "package.json"), "utf8");
   const packageJSON = JSON.parse(raw);
   packageJSON.main = "index.min.js";
-  packageJSON.module = "index.esm.js";
+  packageJSON.modules = "index.esm.js";
   packageJSON.types = "index.d.ts";
-  packageJSON.files = ["src"];
+  packageJSON.exports = {
+    ".": {
+      import: "./index.mjs",
+    },
+  };
+  delete packageJSON.files;
   delete packageJSON.private;
   delete packageJSON.devDependencies;
   delete packageJSON.scripts;

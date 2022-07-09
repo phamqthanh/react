@@ -1,17 +1,14 @@
 {
-  "name": "@phamqthanh",
+  "name": "@phamqthanh/sticky",
   "version": "1.0.0",
   "description": "pqt modules",
   "repository": "https://github.com/phamqthanh/sticky.git",
   "namespace": "@phamqthanh",
   "main": "index.min.js",
-  "modules": "./dist/index.ts",
-  "files": [
-    "src"
-  ],
+  "modules": "index.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs"
+      "import": "./index.mjs"
     }
   },
   "types": "index.d.ts",
@@ -19,6 +16,5 @@
   "license": "ISC",
   "dependencies": {
     "pretty-bytes": "^6.0.0"
-  },
-  "module": "index.esm.js"
+  }
 }
