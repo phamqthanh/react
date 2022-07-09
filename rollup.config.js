@@ -1,10 +1,10 @@
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
+// import resolve from "@rollup/plugin-node-resolve";
+// import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
+// import dts from "rollup-plugin-dts";
 import { terser } from "rollup-plugin-terser";
 
-const packageJson = require("./package.json");
+// const packageJson = require("./package.json");
 
 const FRAMEWORK = process.env.FRAMEWORK || "index";
 const DECLARATIONS = process.env.DECLARATIONS || false;
@@ -41,6 +41,9 @@ const plugins = [
     exclude: ["./docs"],
   }),
 ];
+if (MIN) {
+  plugins.push(terser());
+}
 
 // export default [
 //   {

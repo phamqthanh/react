@@ -1,0 +1,9 @@
+src
+.editorconfig
+.gitignore
+rollup.config.js
+tsconfig.json
+*.lock
+.prettierrc
+.build.sh
+.github

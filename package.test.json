@@ -4,8 +4,8 @@
   "description": "pqt modules",
   "repository": "https://github.com/phamqthanh/sticky.git",
   "namespace": "@phamqthanh",
-  "main": "src/index.ts",
-  "modules": "src/dist/index.ts",
+  "main": "dist/index.mjs",
+  "modules": "dist/index.mjs",
   "files": [
     "dist"
   ],
@@ -29,8 +29,5 @@
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
-  },
-  "dependencies": {
-    "pretty-bytes": "^6.0.0"
   }
 }
