@@ -4,25 +4,29 @@
   "description": "pqt modules",
   "repository": "https://github.com/phamqthanh/sticky.git",
   "namespace": "@phamqthanh",
-  "main": "src/index.ts",
-  "modules": "src/dist/index.ts",
+  "main": "./src/index.ts",
+  "modules": "./src/index.ts",
   "files": [
-    "dist"
+    "src"
   ],
-  "types": "dist/index.d.ts",
+  "types": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "prepare": "husky install"
   },
   "author": "Thanh Pham",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.3",
     "@types/react": "^18.0.15",
     "chalk": "^5.0.1",
     "execa": "^6.1.0",
+    "husky": "^8.0.0",
     "react": "^18.2.0",
     "rollup": "^2.76.0",
     "rollup-plugin-dts": "^4.2.2",

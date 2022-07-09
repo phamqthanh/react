@@ -43,6 +43,8 @@ async function addPackageJSON() {
   const packageJSON = JSON.parse(raw);
   packageJSON.main = "dist/index.min.js";
   packageJSON.module = "dist/index.esm.js";
+  packageJSON.types = "dist/index.d.ts";
+  packageJSON.files = ["src"];
   delete packageJSON.private;
   delete packageJSON.devDependencies;
   delete packageJSON.scripts;
