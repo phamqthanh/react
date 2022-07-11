@@ -9,6 +9,7 @@ specifiers:
   '@types/react': ^18.0.15
   chalk: ^5.0.1
   execa: ^6.1.0
+  headlessui: github:tailwindlabs/headlessui
   husky: ^8.0.0
   pretty-bytes: ^6.0.0
   react: ^18.2.0
@@ -19,6 +20,7 @@ specifiers:
   typescript: ^4.7.4
 
 dependencies:
+  headlessui: github.com/tailwindlabs/headlessui/fc7def3295449261bbdc6c6e1d990c87ed4cac11
   pretty-bytes: 6.0.0
 
 devDependencies:
@@ -1711,3 +1713,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  github.com/tailwindlabs/headlessui/fc7def3295449261bbdc6c6e1d990c87ed4cac11:
+    resolution: {tarball: https://codeload.github.com/tailwindlabs/headlessui/tar.gz/fc7def3295449261bbdc6c6e1d990c87ed4cac11}
+    name: headlessui
+    version: 0.0.0
+    dev: false
