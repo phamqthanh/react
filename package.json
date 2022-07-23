@@ -1,9 +1,9 @@
 {
-  "name": "@phamqthanh/sticky",
+  "name": "@pqt/react",
   "version": "1.0.0",
   "description": "pqt modules",
-  "repository": "https://github.com/phamqthanh/sticky.git",
-  "namespace": "@phamqthanh",
+  "repository": "https://github.com/phamqthanh/react.git",
+  "namespace": "@pqt",
   "main": "./dist/index.ts",
   "modules": "./dist/index.ts",
   "files": [

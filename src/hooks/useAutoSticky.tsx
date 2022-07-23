@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
-import autoSticky, { Options } from "../sticky/autoSticky";
+import autoSticky, { Options } from "../core/autoSticky";
 
 export function useAutoSticky<T extends Element>(options?: Options): [React.RefObject<T>] {
   const element = useRef<T>(null);
