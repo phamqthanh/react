@@ -48,7 +48,7 @@ export default function autoSticky(target: HTMLElement, options?: Options) {
     // Check if block offsetTop is lower than scroller top
     // If so, set block height to anchor height
     const targetStickPosition = target.scrollHeight + blockOffsetTop - window.innerHeight;
-    console.log(target.scrollHeight, blockOffsetTop, window.innerHeight);
+    // console.log(target.scrollHeight, blockOffsetTop, window.innerHeight);
     if (top > 0) {
       setBlockHeight(targetOffsetTop - blockOffsetTop);
     } else {

@@ -1,5 +1,5 @@
 {
-  "name": "@pqt/react",
+  "name": "@pqthanh/sticky",
   "version": "1.0.0",
   "description": "pqt modules",
   "repository": "https://github.com/phamqthanh/react.git",
@@ -33,15 +33,12 @@
     "chalk": "^5.0.1",
     "execa": "^6.1.0",
     "husky": "^8.0.0",
+    "pretty-bytes": "^6.0.0",
     "react": "^18.2.0",
     "rollup": "^2.76.0",
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4",
-    "pretty-bytes": "^6.0.0"
-  },
-  "dependencies": {
-    "headlessui": "github:tailwindlabs/headlessui"
+    "typescript": "^4.7.4"
   }
 }

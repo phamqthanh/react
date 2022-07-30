@@ -92,6 +92,24 @@ async function outputSize() {
   console.log("Brotli size: " + prettyBytes(size));
 }
 
+async function publish() {
+  const raw = await fs.readFile(resolve(rootDir, "package.json"), "utf8");
+  const packageJSON = JSON.parse(raw);
+  const response = await prompts([
+    {
+      type: "confirm",
+      name: "value",
+      message: `Project is build. Ready to publish?`,
+      initial: false,
+    },
+  ]);
+  if (response.value) {
+    execSync("npm publish ./dist");
+    execSync(`git tag ${packageJSON.version}`);
+    execSync(`git push origin --tags`);
+  }
+}
+
 if (isPublishing) await prepareForPublishing();
 await clean();
 info("Rolling up primary package");
@@ -117,3 +135,4 @@ await bundleDeclarations();
 await addPackageJSON();
 await outputSize();
 success("Build complete");
+isPublishing ? await publish() : success("Build complete");

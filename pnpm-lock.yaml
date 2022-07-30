@@ -9,7 +9,6 @@ specifiers:
   '@types/react': ^18.0.15
   chalk: ^5.0.1
   execa: ^6.1.0
-  headlessui: github:tailwindlabs/headlessui
   husky: ^8.0.0
   pretty-bytes: ^6.0.0
   react: ^18.2.0
@@ -18,10 +17,6 @@ specifiers:
   rollup-plugin-terser: ^7.0.2
   tslib: ^2.4.0
   typescript: ^4.7.4
-
-dependencies:
-  headlessui: github.com/tailwindlabs/headlessui/fc7def3295449261bbdc6c6e1d990c87ed4cac11
-  pretty-bytes: 6.0.0
 
 devDependencies:
   '@commitlint/cli': 17.0.3
@@ -33,6 +28,7 @@ devDependencies:
   chalk: 5.0.1
   execa: 6.1.0
   husky: 8.0.1
+  pretty-bytes: 6.0.0
   react: 18.2.0
   rollup: 2.76.0
   rollup-plugin-dts: 4.2.2_sk2p66houzdp4ognhkknlnus3i
@@ -1256,7 +1252,7 @@ packages:
   /pretty-bytes/6.0.0:
     resolution: {integrity: sha512-6UqkYefdogmzqAZWzJ7laYeJnaXDy2/J+ZqiiMtS7t7OfpXWTlaeGMwX8U6EFvPV/YWWEKRkS8hKS4k60WHTOg==}
     engines: {node: ^14.13.1 || >=16.0.0}
-    dev: false
+    dev: true
 
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
@@ -1713,9 +1709,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-  github.com/tailwindlabs/headlessui/fc7def3295449261bbdc6c6e1d990c87ed4cac11:
-    resolution: {tarball: https://codeload.github.com/tailwindlabs/headlessui/tar.gz/fc7def3295449261bbdc6c6e1d990c87ed4cac11}
-    name: headlessui
-    version: 0.0.0
-    dev: false
