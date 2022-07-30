@@ -134,5 +134,5 @@ await bundleDeclarations();
 
 await addPackageJSON();
 await outputSize();
-success("Build complete");
+// success("Build complete");
 isPublishing ? await publish() : success("Build complete");
