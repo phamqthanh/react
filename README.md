@@ -1,6 +1,7 @@
 # REACT STICKY
 
 Sticky element with sensible behaviour if the content is bigger than the viewport.
+> **_NOTE:_**  Sticky element should not has margin. This case has not been handled yet
 
 ## USE A HOOKS
 
@@ -23,7 +24,9 @@ const Page = () => {
 };
 ```
 
-Sticky to parent elemnt
+~~Sticky to parent elemnt~~
+
+> **_NOTE:_**  This option is not fixed yet.
 
 ```tsx
 import React from "react";
