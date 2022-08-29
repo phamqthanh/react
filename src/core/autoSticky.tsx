@@ -31,7 +31,7 @@ export default function autoSticky(target: HTMLElement, options?: Options) {
     const { top } = block.getBoundingClientRect();
     const blockOffsetTop = top + window.scrollY;
 
-    const targetStickPosition = target.scrollHeight + blockOffsetTop - window.innerHeight;
+    const targetStickPosition = target.clientHeight + blockOffsetTop - window.innerHeight;
     // Check if block offsetTop is lower than scroller top
     // If so, set block height to anchor height
     setBlockHeight(target.offsetTop - block.offsetHeight);
@@ -49,7 +49,7 @@ export default function autoSticky(target: HTMLElement, options?: Options) {
 
     // Check if block offsetTop is lower than scroller top
     // If so, set block height to anchor height
-    const targetStickPosition = target.scrollHeight - window.innerHeight;
+    const targetStickPosition = target.clientHeight - window.innerHeight;
     setBlockHeight(blockHeight);
 
     target.style.top = `-${targetStickPosition}px`; // this value won't change
@@ -64,7 +64,7 @@ export default function autoSticky(target: HTMLElement, options?: Options) {
     if (!target || lastOffsetTop <= el.scrollTop) return;
 
     setBlockHeight(target.offsetTop - block.offsetHeight);
-    target.style.bottom = el.clientHeight - target.scrollHeight - offsetTop + "px";
+    target.style.bottom = el.clientHeight - target.clientHeight - offsetTop + "px";
     target.style.top = "intital";
     type = ScrollType.UP;
   }
@@ -73,7 +73,7 @@ export default function autoSticky(target: HTMLElement, options?: Options) {
     if (!target || lastOffsetTop <= window.scrollY) return;
 
     setBlockHeight(target.offsetTop - block.offsetTop);
-    target.style.bottom = window.innerHeight - target.scrollHeight - offsetTop + "px";
+    target.style.bottom = window.innerHeight - target.clientHeight - offsetTop + "px";
     target.style.top = "initial";
     type = ScrollType.UP;
   }
@@ -81,7 +81,7 @@ export default function autoSticky(target: HTMLElement, options?: Options) {
   function handleScroll(this: HTMLElement | Window) {
     if (!target) return;
     if (this instanceof Window) {
-      if (target.scrollHeight <= this.innerHeight) {
+      if (target.clientHeight <= this.innerHeight) {
         window.removeEventListener("scroll", handleScroll);
         return (target.style.top = offsetTop + "px");
       }
@@ -97,7 +97,7 @@ export default function autoSticky(target: HTMLElement, options?: Options) {
       }
       lastOffsetTop = this.scrollY;
     } else {
-      if (target.scrollHeight <= this.clientHeight) {
+      if (target.clientHeight <= this.clientHeight) {
         window.removeEventListener("scroll", handleScroll);
         return (target.style.top = offsetTop + "px");
       }
